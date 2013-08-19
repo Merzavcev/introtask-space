@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Introtask-space</title>
+	<script type="text/javascript" src="task.js"></script>
+	<script type="text/javascript">
+		var vessel = new Vessel('Яндекс', [0,0], 1000);
+		var planetA = new Planet('A', [0,0], 0);
+		var planetB = new Planet('B', [100,100], 5000);
+		
+		vessel.report();
+		planetA.report();
+		planetB.report();
+		/*
+		vessel.flyTo(planetB);
+		vessel.report();
+		planetB.loadCargoTo(vessel,1000);
+		vessel.report();
+		planetA.report();
+		planetB.report();	
+		
+		vessel.flyTo(planetA);
+		vessel.report();
+		planetA.unloadCargoFrom(vessel,500);
+		
+		vessel.report();
+		planetA.report();
+		planetB.report();
+		*/
+	</script>
+</head>
+<body>
+	<button onclick="vessel.report();planetA.report();planetB.report();">Отчёты</button><br>
+	<button onclick="vessel.flyTo(planetA);">Отправить корабль на Планету А</button>
+	<button onclick="vessel.flyTo(planetB);">Отправить корабль на Планету Б</button><br>
+	<button onclick="planetA.loadCargoTo(vessel,500);">Загрузить 500 т с Планеты А</button>
+	<button onclick="planetB.loadCargoTo(vessel,500);">Загрузить 500 т с Планеты Б</button><br>
+	<button onclick="planetA.unloadCargoFrom(vessel,500);">Выгрузить 500 т на Планету А</button>
+	<button onclick="planetB.unloadCargoFrom(vessel,500);">Выгрузить 500 т на Планету Б</button>
+</body>
+</html>
